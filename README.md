@@ -6,10 +6,10 @@ This project is a RESTful service that manages and queries event data based on a
 
 ## Tech Stack
 
-- **Backend Framework**: [Choose your preferred backend framework here]
-- **Database**: [Specify the database you chose and why]
+- **Backend Framework**: python Django and Django rest framework
+- **Database**: postgresql
 - **External APIs**: Weather API, Distance Calculation API
-- **Deployment**: [Optional: Mention if you deployed the service and where]
+- **Deployment**: AWS EC2
 
 ## Core Features
 
@@ -18,16 +18,36 @@ This project is a RESTful service that manages and queries event data based on a
 
 ## Design Decisions
 
-- **Choice of Tech Stack**: We chose [Explain your choice of backend framework, database, etc.]
-- **Database Design**: [Explain how you structured your database to optimize query performance]
+- **Choice of Tech Stack**: We chose Django and Django REST Framework for the backend framework. Django provides a robust and scalable framework for building web applications, offering features such as ORM (Object-Relational Mapping) for database interactions, built-in authentication, and a powerful admin interface. Django REST Framework extends Django's capabilities to facilitate the creation of RESTful APIs, providing tools for serialization, authentication, and viewsets for defining API endpoints. We chose Django and Django REST Framework for their extensive documentation, strong community support, and ease of development, making them ideal for building the RESTful service required for this project.
+
+- **Database Design**: For this project, we chose PostgreSQL as the database management system due to its robust features, reliability, and performance. To optimize query performance, we structured the database with the following considerations:
+
+1. **Normalization**: We employed normalization techniques to reduce data redundancy and improve data integrity. This involved organizing data into separate tables and establishing relationships between them using foreign keys.
+
+2. **Indexes**: We created appropriate indexes on columns frequently used in queries, such as latitude, longitude, and date fields. Indexing helps speed up data retrieval by allowing the database engine to quickly locate relevant rows.
+
+
+
 - **Error Handling**: Implemented robust error handling for external API failures and other errors, ensuring graceful degradation.
 
 ## Installation and Setup
 
-1. **Clone the Repository**: `git clone [repository-url]`
-2. **Install Dependencies**: `npm install` or `yarn install`
-3. **Environment Variables**: Set up environment variables for API keys and other sensitive information.
-4. **Run the Service**: `npm start` or `yarn start`
+1. **Clone the Repository**: 
+   ```bash
+   git clone [repository-url]
+
+pip install -r requirements.txt
+
+setup database in settings.py
+
+**Run Command**:
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py runserver
+
+
 
 ## API Endpoints
 
@@ -45,21 +65,8 @@ This project is a RESTful service that manages and queries event data based on a
 - **Response Format**: JSON
 - **Example**: `curl -X GET "http://localhost:3000/events/find?latitude=40.7128&longitude=-74.0060&date=2024-03-15"`
 
-## Test Case Execution
 
-1. **Input**: User's Source Latitude: 40.7128, User's Source Longitude: -74.0060, Search Date: 2024-03-15
-2. **Output**: [Paste the output JSON response here]
 
-## Bonus (Optional)
 
-- **Hosted API**: The API is hosted on [mention hosting platform] at [API URL]
-- **Curl Requests**: `curl` requests to test the provided test case input against the hosted API.
 
-## Screenshots (Optional)
 
-- [Include screenshots or screen recordings showing the execution of the provided test case through your API]
-
-## Contributors
-
-- [Your Name]
-- [Other contributors if applicable]

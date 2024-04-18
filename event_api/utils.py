@@ -18,7 +18,7 @@ class Service:
 
 
     async def get_weather_async(self,session, lat, lon, date):
-        api_key = "a498aecd4c446332949b3d2b168d3b4d"
+        api_key = "youer api key"
         api_url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&date={date}&appid={api_key}&units=metric"
         async with session.get(api_url) as response:
             if response.status == 200:
@@ -39,7 +39,7 @@ class Service:
     
     
     async def get_distance_async(self,latitude1, longitude1, latitude2, longitude2):
-        api_key = "IAKvV2EvJa6Z6dEIUqqd7yGAu7IZ8gaH-a0QO6btjRc1AzFu8Y3IcQ=="  # API key
+        api_key = "youer api key"  # API key
         api_url = f"https://gg-backend-assignment.azurewebsites.net/api/Distance?code={api_key}&latitude1={latitude1}&longitude1={longitude1}&latitude2={latitude2}&longitude2={longitude2}"
         async with aiohttp.ClientSession() as session:
             async with session.get(api_url) as response:

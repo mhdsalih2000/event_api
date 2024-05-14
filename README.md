@@ -18,7 +18,7 @@ This project is a RESTful service that manages and queries event data based on a
 
 ## Design Decisions
 
-- **Choice of Tech Stack**: We chose Django and Django REST Framework for the backend framework. Django provides a robust and scalable framework for building web applications, offering features such as ORM (Object-Relational Mapping) for database interactions, built-in authentication, and a powerful admin interface. Django REST Framework extends Django's capabilities to facilitate the creation of RESTful APIs, providing tools for serialization, authentication, and viewsets for defining API endpoints. We chose Django and Django REST Framework for their extensive documentation, strong community support, and ease of development, making them ideal for building the RESTful service required for this project.
+- **Choice of Tech Stack**: i chose Django and Django REST Framework for the backend framework. Django provides a robust and scalable framework for building web applications, offering features such as ORM (Object-Relational Mapping) for database interactions, built-in authentication, and a powerful admin interface. Django REST Framework extends Django's capabilities to facilitate the creation of RESTful APIs, providing tools for serialization, authentication, and viewsets for defining API endpoints. We chose Django and Django REST Framework for their extensive documentation, strong community support, and ease of development, making them ideal for building the RESTful service required for this project.
 
 - **Database Design**: For this project, we chose PostgreSQL as the database management system due to its robust features, reliability, and performance. To optimize query performance, we structured the database with the following considerations:
 
